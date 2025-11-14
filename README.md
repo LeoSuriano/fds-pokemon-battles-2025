@@ -105,31 +105,6 @@ The third notebook focuses on **interpretability and simplicity**.
 Instead of using a large feature set, it builds a very compact table with
 only **five hand-crafted features**, and trains a Logistic Regression model.
 
-**Feature engineering**
-
-The function `create_features1(...)` extracts, for each battle, the
-following features:
-
-1. **`hp_edge_final`**  
-   Final HP edge: average HP% of player 2 minus average HP% of player 1
-   at the end of the battle (over all revealed Pokémon).
-
-2. **`used_count_diff`**  
-   Difference in the number of distinct Pokémon actually used by the two
-   players (player 2 minus player 1).
-
-3. **`revealed_count_diff`**  
-   Difference in the number of distinct Pokémon revealed by the two
-   players (player 2 minus player 1).
-
-4. **`p1_status_mean_final`**  
-   Mean final status severity for player 1, using a mapping of status
-   conditions to numeric severity (e.g. normal, paralyzed, burned, etc.).
-
-5. **`status_severity_gap_final`**  
-   Final status severity gap: mean status severity of player 2 minus that
-   of player 1.
-
 The resulting `train_df` therefore has these five features, plus
 `battle_id` and `player_won`. The test table has the same five features
 and `battle_id`, but no target.
@@ -147,5 +122,3 @@ and `battle_id`, but no target.
 - The chosen model is then re-trained on the full training set and used to
   generate a submission file.
 
-This notebook is designed to be **easy to read and to interpret**, since
-all features have a clear intuitive meaning.

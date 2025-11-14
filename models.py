@@ -6,6 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import AdaBoostClassifier, VotingClassifier
 from sklearn.tree import DecisionTreeClassifier
+from xgboost import XGBClassifier 
 
 #Submission 1 model tuned
 def get_model_sub1():

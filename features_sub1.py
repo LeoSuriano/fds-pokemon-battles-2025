@@ -398,7 +398,7 @@ def create_features(data: list[dict]) -> pd.DataFrame:
 
 FEATURE_COLS_SUB1 = [
     "hp_edge_final","revealed_count_diff","status_severity_gap_final","ko_rate_total",
-    "severe2_turns_diff","attacks_rate_diff","active_entropy_diff","status_diversity_diff",
+    "severe2_turns_diff","attacks_rate_diff","active_entropy_diff",
     "p2_used_count","par_turns_diff","type_edge_avg_diff","p2_late_damage","used_mean_spe_diff",
     "p1_status_mean_final","alive_diff_final","types_last_round","lead_type_edge","last_switch_turn_p1",
     "atk_edge_used","p1_turns_psn_tox","severe_status_early_share","p2_turns_psn_tox","initiative_early_diff",

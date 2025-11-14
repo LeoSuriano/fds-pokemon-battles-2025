@@ -682,3 +682,35 @@ def build_features(dataset):
     df = pd.DataFrame(rows).fillna(0)
     return df
 
+FEATURE_COLS_SUB2 = [
+    "revealed_count_diff","hp_edge_final","status_severity_gap_final","p1_alive_final",
+    "active_entropy_diff","status_turns_advantage","tox_ratio_diff","forced_switch_share_diff",
+    "rs_hit_share_diff","boom_count_diff","counter_count_diff","move_diversity_p1",
+    "used_mean_spe_diff","p2_late_damage","p1_status_mean_final","attacks_rate_diff",
+    "bp_mean_p2","hp_gap_peak_turn_share","eff_speed_adv_share_p2","types_last_round",
+    "atk_edge_used","last_switch_turn_p1","lead_type_edge","hp_gap_slope_jump",
+    "initiative_late_diff","initiative_early_diff","comeback_time_share_diff",
+    "severe_status_early_share","rec_share_diff","switch_delta_exp_damage_diff",
+    "substitute_break_rate_diff","confusion_late_share_diff","status_diversity_p1",
+    "hp_gap_autocorr","status_late_share_diff","pingpong_switches_diff",
+    "same_move_streak_max_diff","substitute_late_share_diff","p1_sleep_streak_max",
+    "immune_count_diff","heal_efficiency_diff","exp_dmg_stabtype_avg_diff","hp_gap_var",
+    "both_switched_share","p1_switch_late_share","p2_max_boost_sum","status_diversity_diff",
+    "hp_gap_sign_flips","reflect_early_share_diff","lead_def_edge","heal_mid_diff",
+    "confusion_exp_dmg_ratio_diff","type_seen_count_diff","eff_speed_edge_avg",
+    "heal_late_diff","sleep_streak_max_diff","p1_turns_par","p2_used_count",
+    "hp_gap_peak","p2_turns_brn","p1_immune_count","p2_seen_type_count",
+    "p1_pingpong_switches","confusion_turns_diff",
+]
+
+def create_features_sub2(train_data, test_data):
+    train_df = build_features(train_data)
+    test_df = build_features(test_data)
+
+    X_train = train_df[FEATURE_COLS_SUB2].copy()
+    y_train = train_df["player_won"].astype(int).copy()
+    X_test = test_df[FEATURE_COLS_SUB2].copy()
+
+    return X_train, y_train, X_test
+
+

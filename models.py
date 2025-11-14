@@ -29,6 +29,63 @@ def get_model_sub1():
     return model
 
 
+def get_model_sub2():
+    """
+    Ensemble (Submission 2): LR + AdaBoost + XGBoost with fixed best hyperparameters.
+    """
+    # Logistic Regression (best params)
+    lr = Pipeline([
+        ("scale", StandardScaler(with_mean=False)),
+        ("clf", LogisticRegression(
+            solver="liblinear",
+            penalty="l1",
+            C=2.5,
+            tol=1e-06,
+            class_weight=None,
+            max_iter=6000,
+            n_jobs=-1,
+            random_state=42,
+        )),
+    ])
+
+    # AdaBoost (best params)
+    ada = AdaBoostClassifier(
+        estimator=DecisionTreeClassifier(max_depth=1, random_state=42),
+        algorithm="SAMME.R",
+        n_estimators=330,
+        learning_rate=0.26,
+        random_state=42,
+    )
+
+    # XGBoost (best params)
+    xgb = XGBClassifier(
+        objective="binary:logistic",
+        eval_metric="logloss",
+        n_estimators=1000,
+        max_depth=4,
+        learning_rate=0.015,
+        subsample=0.6,
+        colsample_bytree=0.65,
+        min_child_weight=3,
+        reg_alpha=0.05,
+        reg_lambda=1.0,
+        gamma=0.1,
+        n_jobs=-1,
+        random_state=42,
+    )
+
+    ensemble = VotingClassifier(
+        estimators=[
+            ("lr", lr),
+            ("ada", ada),
+            ("xgb", xgb),
+        ],
+        voting="soft",
+        weights=[0.7332496900000001, 0.72199009, 0.7247116899999999],
+        n_jobs=-1,
+    )
+
+    return ensemble
 
 
 

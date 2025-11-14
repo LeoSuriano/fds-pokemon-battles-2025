@@ -682,9 +682,3 @@ def build_features(dataset):
     df = pd.DataFrame(rows).fillna(0)
     return df
 
-
-train_df = build_features(train_data)
-test_df = build_features(test_data)
-
-print(f"[FINAL] train_df: {train_df.shape}")
-print(f"[FINAL] test_df : {test_df.shape}")

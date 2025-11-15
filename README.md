@@ -16,8 +16,10 @@ pipeline structure:
 
 Each notebook, however, uses a **different feature set and a different model**.
 
-In the notebooks we have provided some comments, that aims to help the reader moving around the code and get what the code is doing.
+In each notebook we have provided some comments, that aims to help the reader moving around the code and get what the code is doing.
 In case you would like to deep dive into the code a bit more, please check the notebooks themselvelf.
+
+
 
 **AI assistance disclaimer**
 

@@ -6,28 +6,6 @@ predictive models for Pokémon battles using hand–crafted features extracted
 from the raw JSONL battle logs.
 
 
-# This code has been produced by the group "team_pk" group, composed of Leonardo Suriano, Riccardo Pugliese and Mariana Dos Campos.
-# In the code we have provided some comments, that aims to help the reader moving around the code and get what the code is doing.
-# The whole explanation has been given for each step of the code, from the building features code to the final predictive model. 
-# Moreover, we decided to import libraries not all at once, but to import in every cell the libraries that the cell is using. This choice 
-# has been made in order to make clear which library has been used in that specific cell.
-# In case the comments we added are not enough to satisfy your curiosity, and in case you may need further clarification about function
-# taken from libraries, please refer to the documentation of the respective libraries.
-# In case you need further clarification about function we created from scratch in our code or about how the libraries functions has
-# been used, please feel free to contact us. We will be more than happy to answer all your doubt!!!
-
-
-
-
-# AI assistance disclaimer
-# Parts of this code (in particular some comments, the iterative feature search, and minor implementation details) may have been drafted or refined 
-# with the help of AI-based tools. The use of AI was strictly limited to these aspects. All core ideas, modeling choices, and logical structures 
-# implemented in the code and in the models were entirely conceived and designed by the members of the group, without external intellectual 
-# contribution, relying solely on online documentation, our own knowledge and the insights provided by the course lectures.
-
-
-
-
 We provide three separate notebooks, each corresponding to one of our
 final Kaggle submissions. All three notebooks share the same overall
 pipeline structure:

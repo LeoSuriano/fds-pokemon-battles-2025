@@ -20,6 +20,7 @@ In the notebooks we have provided some comments, that aims to help the reader mo
 In case you would like to deep dive into the code a bit more, please check the notebooks themselvelf.
 
 **AI assistance disclaimer**
+
 Parts of the code contained in our project may have been drafted or refined with the help of AI-based tools. The use of AI was strictly limited to aspects like comments, iterative feature search and minor implementation details. All core ideas, modeling choices, and logical structures implemented in the code and in the models were entirely conceived and designed by the members of the group, without external intellectual contribution, relying solely on online documentation, our own knowledge and the insights provided by the course lectures.
 
 ---

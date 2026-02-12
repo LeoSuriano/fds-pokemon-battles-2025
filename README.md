@@ -1,5 +1,7 @@
-> **“FDS: Pokemon Battles prediction 2025”**  ** 2nd place in the competition **
+> **“FDS: Pokemon Battles prediction 2025”** 
 > course: *Fundamentals of Data Science*, Sapienza University of Rome.
+
+** 2nd place in the competition **
 
 The project was developed by the group **“team_pk”** and focuses on building
 predictive models for Pokémon battles using hand–crafted features extracted
